@@ -1,0 +1,93 @@
+{
+    "welcome": "Welcome to Zushi City",
+    "tabs": {
+        "home": "Home",
+        "map": "Map",
+        "garbage": "Garbage",
+        "menu": "Menu",
+        "news": "News",
+        "events": "Events"
+    },
+    "home": {
+        "latest_news": "Latest News",
+        "quick_links": "Quick Links",
+        "guide": "Guide",
+        "services": "Services",
+        "subtitle": "Discover the beauty of our city.",
+        "news_title": "City Hall Announcement",
+        "news_desc": "Please check the garbage collection schedule for the holidays.",
+        "disaster_info": "Disaster Info",
+        "see_all": "See All"
+    },
+    "menu": {
+        "survey": "Citizen Survey",
+        "settings": "Settings",
+        "living_procedures": "Living & Procedures",
+        "child_rearing": "Child Rearing",
+        "child_rearing_sub": "Support, Health Checks, Events",
+        "public_transport": "Public Transport",
+        "public_transport_sub": "Bus Schedules, Train Info",
+        "city_info": "City Information",
+        "news_updates": "News & Updates",
+        "survey_sub": "Voice your opinion",
+        "support": "Support",
+        "help_faq": "Help & FAQ",
+        "official_links": "Official Links",
+        "website": "Website",
+        "twitter": "Twitter",
+        "contact": "Contact",
+        "portal_subtitle": "Zushi City Portal"
+    },
+    "garbage": {
+        "calendar_title": "📅 Collection Calendar",
+        "today": "TODAY",
+        "no_collection": "No collection",
+        "search_title": "🔍 Waste Dictionary",
+        "search_placeholder": "Search items (e.g., Battery)",
+        "no_items_found": "No items found matching \"{{query}}\"",
+        "bulk_trash_title": "⚠️ Bulk Trash",
+        "bulk_trash_desc": "Large items (over 30cm) require a reservation.\nPlease call the Bulk Trash Center or apply online.",
+        "bulk_trash_call": "📞 Call: 046-871-xxxx",
+        "types": {
+            "burnable": "Burnable",
+            "non_burnable": "Non-burnable",
+            "recyclable": "Recyclable",
+            "hazardous": "Hazardous"
+        }
+    },
+    "map": {
+        "legend": "Legend",
+        "public": "Public Facility",
+        "shelter": "Shelter",
+        "park": "Park"
+    },
+    "disaster": {
+        "title": "Disaster Info",
+        "mode_active": "Disaster Mode Active",
+        "open_info": "Open Emergency Info",
+        "emergency_contact": "Emergency Contact",
+        "fire_ambulance": "Fire / Ambulance",
+        "police": "Police",
+        "shelters": "Shelters"
+    },
+    "guide": {
+        "procedures": "Procedures",
+        "residence": "Residence Registration",
+        "tax": "Tax Info",
+        "child_rearing": "Child Rearing",
+        "vaccination": "Vaccination",
+        "nursery": "Nursery School",
+        "transport": "Transport",
+        "bus_schedule": "Bus Schedule",
+        "train_info": "Train Info"
+    },
+    "survey": {
+        "title": "Citizen Voice",
+        "description": "We value your feedback to improve our city.",
+        "question": "What would you like to see improved in Zushi?",
+        "placeholder": "Write your thoughts here...",
+        "submit": "Submit Feedback",
+        "thank_you": "Thank You",
+        "received": "Your feedback has been received."
+    }
+}

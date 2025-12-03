@@ -1,0 +1,17 @@
+{
+    "welcome": "欢迎来到逗子市",
+    "tabs": {
+        "home": "首页",
+        "map": "地图",
+        "garbage": "垃圾分类",
+        "menu": "菜单",
+        "news": "新闻",
+        "events": "活动"
+    },
+    "home": {
+        "latest_news": "最新消息",
+        "quick_links": "快速链接",
+        "guide": "指南",
+        "services": "服务"
+    }
+}

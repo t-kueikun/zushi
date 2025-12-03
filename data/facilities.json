@@ -1,0 +1,49 @@
+{
+    "facilities": [
+        {
+            "id": "1",
+            "name": "Zushi City Hall",
+            "name_ja": "逗子市役所",
+            "type": "public",
+            "latitude": 35.2965,
+            "longitude": 139.5786,
+            "address": "5-2-16 Zushi"
+        },
+        {
+            "id": "2",
+            "name": "Zushi Station",
+            "name_ja": "逗子駅",
+            "type": "transport",
+            "latitude": 35.2975,
+            "longitude": 139.5783,
+            "address": "1-1-10 Zushi"
+        },
+        {
+            "id": "3",
+            "name": "Hiroyama Park",
+            "name_ja": "披露山公園",
+            "type": "park",
+            "latitude": 35.2933,
+            "longitude": 139.5633,
+            "address": "5-4-1 Shinjuku"
+        },
+        {
+            "id": "4",
+            "name": "Zushi Elementary School (Shelter)",
+            "name_ja": "逗子小学校 (避難所)",
+            "type": "shelter",
+            "latitude": 35.2980,
+            "longitude": 139.5800,
+            "address": "4-2-1 Zushi"
+        },
+        {
+            "id": "5",
+            "name": "Hisagi Elementary School (Shelter)",
+            "name_ja": "久木小学校 (避難所)",
+            "type": "shelter",
+            "latitude": 35.3020,
+            "longitude": 139.5700,
+            "address": "2-1-1 Hisagi"
+        }
+    ]
+}

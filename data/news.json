@@ -1,0 +1,28 @@
+{
+    "news": [
+        {
+            "id": "1",
+            "title": "Year-end Garbage Collection Schedule",
+            "title_ja": "年末年始のゴミ収集日程について",
+            "date": "2025-12-01",
+            "category": "important",
+            "content": "The garbage collection schedule for the year-end and New Year holidays has been finalized..."
+        },
+        {
+            "id": "2",
+            "title": "Zushi Beach Fireworks Festival",
+            "title_ja": "逗子海岸花火大会の開催決定",
+            "date": "2025-11-20",
+            "category": "event",
+            "content": "The annual fireworks festival will be held on..."
+        },
+        {
+            "id": "3",
+            "title": "City Hall Closed on Monday",
+            "title_ja": "月曜日の市役所閉庁について",
+            "date": "2025-11-15",
+            "category": "notice",
+            "content": "City hall will be closed on..."
+        }
+    ]
+}
