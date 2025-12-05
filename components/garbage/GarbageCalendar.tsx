@@ -1,13 +1,47 @@
-import garbageData from '@/data/garbage.json';
-import React, { useState } from 'react';
+import { useAuth } from '@/context/AuthContext';
+import { supabase } from '@/lib/supabase';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import garbageData from '../../data/garbage.json';
 
 type DistrictId = keyof typeof garbageData.schedules;
 
 export function GarbageCalendar() {
     const { t, i18n } = useTranslation();
+    const { user } = useAuth();
     const [selectedDistrict, setSelectedDistrict] = useState<DistrictId>('north');
+
+    useEffect(() => {
+        if (user) {
+            fetchUserDistrict();
+        }
+    }, [user]);
+
+    const fetchUserDistrict = async () => {
+        try {
+            const { data, error } = await supabase
+                .from('profiles')
+                .select('district')
+                .eq('id', user?.id)
+                .single();
+
+            if (data?.district) {
+                const district = data.district;
+                // Map specific districts to North/South
+                const northDistricts = ['ikego', 'numama', 'hisagi', 'yamanone'];
+                // South is default for others (zushi, kotsubo, shinjuku, sakurayama)
+
+                if (northDistricts.includes(district)) {
+                    setSelectedDistrict('north');
+                } else {
+                    setSelectedDistrict('south');
+                }
+            }
+        } catch (error) {
+            console.error('Error fetching user district:', error);
+        }
+    };
 
     const today = new Date();
     const weekDays = Array.from({ length: 7 }, (_, i) => {

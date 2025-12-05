@@ -63,7 +63,7 @@ export default function HomeScreen() {
 
     return (
       <TouchableOpacity
-        onPress={() => router.push('/news')}
+        onPress={() => router.push(`/news/${item.id}`)}
         className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm mr-4 w-72 md:w-80 border border-gray-50 dark:border-gray-800 min-h-[120px] hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
       >
         <View className="flex-row justify-between items-center mb-2">

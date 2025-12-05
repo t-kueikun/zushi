@@ -71,7 +71,7 @@ export function NewsList() {
                 <TouchableOpacity
                     key={item.id}
                     className="bg-white dark:bg-gray-900 p-4 rounded-xl mb-3 shadow-sm border border-gray-100 dark:border-gray-800"
-                    onPress={() => { }}
+                    onPress={() => router.push(`/news/${item.id}`)}
                 >
                     <View className="flex-row justify-between items-start mb-2">
                         <View className={`px-2 py-1 rounded-md ${getCategoryColor(item.category).split(' ')[0]}`}>
