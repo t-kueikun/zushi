@@ -6,7 +6,8 @@
             "title_ja": "年末年始のゴミ収集日程について",
             "date": "2025-12-01",
             "category": "important",
-            "content": "The garbage collection schedule for the year-end and New Year holidays has been finalized..."
+            "content": "The garbage collection schedule for the year-end and New Year holidays has been finalized...",
+            "content_ja": "年末年始のゴミ収集日程が決定しました。12月31日から1月3日まで収集はお休みとなります。"
         },
         {
             "id": "2",
@@ -14,7 +15,8 @@
             "title_ja": "逗子海岸花火大会の開催決定",
             "date": "2025-11-20",
             "category": "event",
-            "content": "The annual fireworks festival will be held on..."
+            "content": "The annual fireworks festival will be held on...",
+            "content_ja": "恒例の逗子海岸花火大会が開催されます。詳細は後日発表いたします。"
         },
         {
             "id": "3",
@@ -22,7 +24,8 @@
             "title_ja": "月曜日の市役所閉庁について",
             "date": "2025-11-15",
             "category": "notice",
-            "content": "City hall will be closed on..."
+            "content": "City hall will be closed on...",
+            "content_ja": "設備点検のため、来週月曜日は市役所が閉庁となります。ご不便をおかけしますがよろしくお願いします。"
         }
     ]
 }

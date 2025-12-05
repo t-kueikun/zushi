@@ -49,7 +49,7 @@ export default function DisasterScreen() {
                             <TouchableOpacity onPress={() => router.back()} className="bg-white/20 p-2 rounded-full mr-3">
                                 <ChevronRight size={24} color="white" style={{ transform: [{ rotate: '180deg' }] }} />
                             </TouchableOpacity>
-                            <Text className="text-white/80 text-xs font-bold uppercase tracking-widest">Emergency</Text>
+                            <Text className="text-white/80 text-xs font-bold uppercase tracking-widest">{t('disaster.emergency_header')}</Text>
                         </View>
                         <Text className="text-white text-3xl font-extrabold">{t('disaster.title')}</Text>
                     </LinearGradient>
@@ -61,8 +61,8 @@ export default function DisasterScreen() {
                                 <AlertTriangle size={32} color="#EF4444" />
                             </View>
                             <View className="flex-1">
-                                <Text className="text-red-600 dark:text-red-400 font-bold text-lg">Emergency Mode</Text>
-                                <Text className="text-gray-500 dark:text-gray-400 text-sm">Tap to view active alerts.</Text>
+                                <Text className="text-red-600 dark:text-red-400 font-bold text-lg">{t('disaster.emergency_mode')}</Text>
+                                <Text className="text-gray-500 dark:text-gray-400 text-sm">{t('disaster.active_alerts')}</Text>
                             </View>
                             <ChevronRight size={24} color="#EF4444" />
                         </View>
@@ -90,8 +90,8 @@ export default function DisasterScreen() {
                                 <Map size={24} color="#10B981" />
                             </View>
                             <View className="flex-1">
-                                <Text className="text-lg font-bold text-gray-900 dark:text-white">View Shelters Map</Text>
-                                <Text className="text-gray-500 dark:text-gray-400">Find nearest evacuation centers</Text>
+                                <Text className="text-lg font-bold text-gray-900 dark:text-white">{t('disaster.view_map')}</Text>
+                                <Text className="text-gray-500 dark:text-gray-400">{t('disaster.find_shelters')}</Text>
                             </View>
                             <ChevronRight size={24} color="#9CA3AF" />
                         </TouchableOpacity>

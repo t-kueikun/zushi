@@ -23,10 +23,10 @@ export function MapComponent({ disasterMode = false }: Props) {
     const isJa = i18n.language === 'ja';
 
     const [region, setRegion] = useState({
-        latitude: 35.2965,
-        longitude: 139.5786,
-        latitudeDelta: 0.02,
-        longitudeDelta: 0.02,
+        latitude: 35.2955,
+        longitude: 139.5805,
+        latitudeDelta: 0.015,
+        longitudeDelta: 0.015,
     });
 
     const getPinColor = (type: string) => {

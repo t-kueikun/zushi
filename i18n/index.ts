@@ -1,4 +1,3 @@
-import * as Localization from 'expo-localization';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
@@ -14,7 +13,7 @@ i18n
             ja: { translation: ja },
             zh: { translation: zh },
         },
-        lng: Localization.getLocales()[0].languageCode ?? 'ja',
+        lng: 'ja',
         fallbackLng: 'ja',
         interpolation: {
             escapeValue: false,

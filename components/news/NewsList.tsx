@@ -1,13 +1,45 @@
-import newsData from '@/data/news.json';
+import { supabase } from '@/lib/supabase';
 import { useRouter } from 'expo-router';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, Text, TouchableOpacity, View } from 'react-native';
+
+type NewsItem = {
+    id: string;
+    title_en: string;
+    title_ja: string;
+    content_en: string;
+    content_ja: string;
+    category: string;
+    date: string;
+};
 
 export function NewsList() {
     const { i18n } = useTranslation();
     const isJa = i18n.language === 'ja';
     const router = useRouter();
+    const [news, setNews] = useState<NewsItem[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetchNews();
+    }, []);
+
+    const fetchNews = async () => {
+        try {
+            const { data, error } = await supabase
+                .from('news')
+                .select('*')
+                .order('date', { ascending: false });
+
+            if (error) throw error;
+            if (data) setNews(data);
+        } catch (error) {
+            console.error('Error fetching news:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     const getCategoryColor = (category: string) => {
         switch (category) {
@@ -17,9 +49,25 @@ export function NewsList() {
         }
     };
 
+    if (loading) {
+        return (
+            <View className="py-10">
+                <ActivityIndicator size="large" color="#6366F1" />
+            </View>
+        );
+    }
+
+    if (news.length === 0) {
+        return (
+            <View className="py-10 items-center">
+                <Text className="text-gray-500 dark:text-gray-400">No news available.</Text>
+            </View>
+        );
+    }
+
     return (
         <View>
-            {newsData.news.map((item) => (
+            {news.map((item) => (
                 <TouchableOpacity
                     key={item.id}
                     className="bg-white dark:bg-gray-900 p-4 rounded-xl mb-3 shadow-sm border border-gray-100 dark:border-gray-800"
@@ -34,10 +82,10 @@ export function NewsList() {
                         <Text className="text-gray-500 dark:text-gray-400 text-xs">{item.date}</Text>
                     </View>
                     <Text className="text-lg font-bold text-gray-900 dark:text-white mb-1">
-                        {isJa ? item.title_ja : item.title}
+                        {isJa ? item.title_ja : item.title_en}
                     </Text>
                     <Text className="text-gray-600 dark:text-gray-300 text-sm" numberOfLines={2}>
-                        {item.content}
+                        {isJa ? (item.content_ja || item.content_en) : item.content_en}
                     </Text>
                 </TouchableOpacity>
             ))}

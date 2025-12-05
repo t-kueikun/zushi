@@ -22,18 +22,18 @@ export function MapComponent({ disasterMode = false }: Props) {
                 </View>
 
                 <Text className="text-2xl font-bold text-gray-900 dark:text-white mb-3 text-center">
-                    {t('map.web_unsupported', 'Mobile Map Experience')}
+                    {t('map.web_unsupported')}
                 </Text>
 
                 <Text className="text-gray-500 dark:text-gray-400 mb-8 text-center leading-6">
-                    Our interactive city map is optimized for the mobile app. Please switch to iOS or Android for the full experience.
+                    {t('map.web_message')}
                 </Text>
 
                 <TouchableOpacity
                     onPress={openGoogleMaps}
                     className="bg-blue-500 w-full py-4 rounded-xl flex-row items-center justify-center shadow-lg active:opacity-90"
                 >
-                    <Text className="text-white font-bold text-lg mr-2">Open Google Maps</Text>
+                    <Text className="text-white font-bold text-lg mr-2">{t('map.open_google_maps')}</Text>
                     <ExternalLink size={20} color="white" />
                 </TouchableOpacity>
             </View>

@@ -53,32 +53,32 @@ export default function HelpScreen() {
                             <TouchableOpacity onPress={() => router.back()} className="bg-white/20 p-2 rounded-full mr-3">
                                 <ChevronRight size={24} color="white" style={{ transform: [{ rotate: '180deg' }] }} />
                             </TouchableOpacity>
-                            <Text className="text-white/80 text-xs font-bold uppercase tracking-widest">Support</Text>
+                            <Text className="text-white/80 text-xs font-bold uppercase tracking-widest">{t('menu.support')}</Text>
                         </View>
                         <Text className="text-white text-3xl font-extrabold">{t('menu.help_faq')}</Text>
                     </LinearGradient>
 
                     <View className="px-4">
                         <FAQItem
-                            question="How do I sort my garbage?"
-                            answer="You can use the 'Garbage' tab to search for specific items or check the collection calendar for your district."
+                            question={t('help.q1')}
+                            answer={t('help.a1')}
                         />
                         <FAQItem
-                            question="Where is the nearest evacuation shelter?"
-                            answer="Check the 'Map' tab and select the 'Shelter' layer to see all available evacuation centers in Zushi."
+                            question={t('help.q2')}
+                            answer={t('help.a2')}
                         />
                         <FAQItem
-                            question="How can I register for child allowance?"
-                            answer="Please visit the City Hall's Child Rearing Support division or check the 'Guide' section for required documents."
+                            question={t('help.q3')}
+                            answer={t('help.a3')}
                         />
 
-                        <Text className="text-lg font-bold text-gray-900 dark:text-white mb-4 mt-6">Still need help?</Text>
+                        <Text className="text-lg font-bold text-gray-900 dark:text-white mb-4 mt-6">{t('help.still_need_help')}</Text>
                         <TouchableOpacity
                             onPress={() => router.push('/survey')}
                             className="bg-blue-500 p-4 rounded-2xl shadow-lg shadow-blue-500/30 flex-row items-center justify-center"
                         >
                             <MessageSquare size={24} color="white" className="mr-2" />
-                            <Text className="text-white font-bold text-lg ml-2">Contact Support</Text>
+                            <Text className="text-white font-bold text-lg ml-2">{t('help.contact_support')}</Text>
                         </TouchableOpacity>
                     </View>
                 </View>

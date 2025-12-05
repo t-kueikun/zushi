@@ -34,7 +34,7 @@ export default function NewsScreen() {
                             <TouchableOpacity onPress={() => router.back()} className="bg-white/20 p-2 rounded-full mr-3">
                                 <ChevronRight size={24} color="white" style={{ transform: [{ rotate: '180deg' }] }} />
                             </TouchableOpacity>
-                            <Text className="text-white/80 text-xs font-bold uppercase tracking-widest">Updates</Text>
+                            <Text className="text-white/80 text-xs font-bold uppercase tracking-widest">{t('common.updates')}</Text>
                         </View>
                         <Text className="text-white text-3xl font-extrabold">{t('tabs.news')}</Text>
                     </LinearGradient>

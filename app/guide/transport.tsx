@@ -20,49 +20,45 @@ export default function TransportScreen() {
 
     const trainLinks = [
         {
-            title: 'JR East (Zushi Station)',
-            title_ja: 'JR東日本 (逗子駅)',
+            title: t('guide.jr_zushi'),
             url: 'https://traininfo.jreast.co.jp/train_info/kanto.aspx',
             icon: <Train size={24} color="#166534" />, // Green for JR
-            desc: 'Live Service Status / 運行情報'
+            desc: t('guide.service_status')
         },
         {
-            title: 'Keikyu Line',
-            title_ja: '京急線 (逗子・葉山駅)',
+            title: t('guide.keikyu_zushi'),
             url: 'https://unkou.keikyu.co.jp/',
             icon: <Train size={24} color="#DC2626" />, // Red for Keikyu
-            desc: 'Live Service Status / 運行情報'
+            desc: t('guide.service_status')
         }
     ];
 
     const busLinks = [
         {
-            title: 'Keikyu Bus Timetable',
-            title_ja: '京急バス 時刻表・経路検索',
+            title: t('guide.keikyu_bus_search'),
             url: 'https://transfer.navitime.biz/keikyubus/pc/map/Top',
             icon: <Bus size={24} color="#2563EB" />,
-            desc: 'Search by bus stop / バス停検索'
+            desc: t('guide.bus_search_desc')
         },
         {
-            title: 'Zushi Station Bus Stops',
-            title_ja: '逗子駅 バス乗り場案内',
+            title: t('guide.zushi_station_bus'),
             url: 'https://www.keikyu-bus.co.jp/line/nori_05.html',
             icon: <Bus size={24} color="#2563EB" />,
-            desc: 'Platform Map / 乗り場マップ'
+            desc: t('guide.platform_map')
         }
     ];
 
     const LinkCard = ({ link }: any) => (
         <TouchableOpacity
             className="p-4 border-b border-gray-100 dark:border-gray-800 flex-row items-center bg-white dark:bg-gray-900 last:border-0"
-            onPress={() => openBrowser(link.url, link.title_ja)}
+            onPress={() => openBrowser(link.url, link.title)}
         >
             <View className="bg-gray-50 dark:bg-gray-800 p-3 rounded-full mr-4">
                 {link.icon}
             </View>
             <View className="flex-1">
                 <Text className="font-bold text-gray-900 dark:text-white text-lg">
-                    {link.title_ja}
+                    {link.title}
                 </Text>
                 <Text className="text-gray-500 dark:text-gray-400 text-sm">
                     {link.desc}
@@ -94,7 +90,7 @@ export default function TransportScreen() {
                             <TouchableOpacity onPress={() => router.back()} className="bg-white/20 p-2 rounded-full mr-3">
                                 <ChevronRight size={24} color="white" style={{ transform: [{ rotate: '180deg' }] }} />
                             </TouchableOpacity>
-                            <Text className="text-white/80 text-xs font-bold uppercase tracking-widest">Access</Text>
+                            <Text className="text-white/80 text-xs font-bold uppercase tracking-widest">{t('guide.access')}</Text>
                         </View>
                         <Text className="text-white text-3xl font-extrabold">{t('guide.transport')}</Text>
                     </LinearGradient>
